@@ -40,4 +40,4 @@ jobs:
         run: npm install -g markdown-spellcheck
 
       - name: Spell check markdown files
-        run: markdown-spellcheck '**/*.md'
+        run: mdspell "**/*.md"
