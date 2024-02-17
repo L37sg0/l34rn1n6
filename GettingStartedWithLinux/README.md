@@ -1,3 +1,5 @@
 ## Getting Started With Linux
-- lector: Scott Simpson
+- lectors:
+  - Scott Simpson
+  - Grant McWilliams
 - courselink: https://www.linkedin.com/learning/paths/getting-started-with-linux
