@@ -16,4 +16,9 @@ jobs:
         run: sudo apt-get install aspell
 
       - name: Spell check markdown files
-        run: aspell --lang=en list -t <(git show $(git log -1 --format="%H") --name-only)
+        run: |
+          for file in $(git diff --name-only --diff-filter=d "$(git log -1 --format='%H')"); do
+            if [[ $file == *.md ]]; then
+              aspell --lang=en list -t "$file"
+            fi
+          done
